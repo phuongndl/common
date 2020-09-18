@@ -1,0 +1,31 @@
+server:
+  port: 8092
+
+spring:
+  application:
+    name: 'user'
+  boot:
+    admin:
+      client:
+        url:
+        - http://localhost:8082
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+  endpoint:
+    health:
+      show-details: always
+      
+security:
+  oauth2:
+    resource:
+      user-info-uri: http://localhost:8088/api/auth/user
+
+hystrix:
+  shareSecurityContext: true
+
+  
