@@ -10,4 +10,5 @@ public class BookDto {
 	private String description;
 	private double price;
 	private int sold;
+	private String isbn;
 }
